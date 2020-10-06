@@ -51,19 +51,20 @@ print("Total: " + "$" + str(sum(Profit)))
 print('Average change: ' + '$' + str(round(average_profit_change, 2)))
 print("Greatest Increase in Profits: " + str(totalMonths[average_change.index(
     max(average_change))+1]) + " " + "$" + str(max_increase_value))
-print("Greatest Increase in Profits: " + str(totalMonths[average_change.index(
+print("Greatest Decrease in Profits: " + str(totalMonths[average_change.index(
     min(average_change))+1]) + " " + "$" + str(max_decrease_value))
 
 
 # output to a text file
-output = open("Py_Bank_Output.txt", "w")
+output = open("Analysis/Py_Bank_Output.txt", "w")
 output.write("Analysis" + "\n")
 output.write('Total Months : ' + str(total_months) + "\n")
 output.write("Total: " + "$" + str(sum(Profit)) + "\n")
-output.write('Average change: ' + '$' + str(round(average_profit_change, 2)))
+output.write('Average change: ' + '$' +
+             str(round(average_profit_change, 2)) + "\n")
 output.write("Greatest Increase in Profits: " + str(totalMonths[average_change.index(
     max(average_change))+1]) + " " + "$" + str(max_increase_value) + "\n")
-output.write("Greatest Increase in Profits: " + str(totalMonths[average_change.index(
+output.write("Greatest Decrease in Profits: " + str(totalMonths[average_change.index(
     min(average_change))+1]) + " " + "$" + str(max_decrease_value))
 
 output.close()

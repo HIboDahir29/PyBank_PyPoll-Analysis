@@ -5,7 +5,7 @@ import csv
 # navigating and joining the file
 budget_data = os.path.join('Resources', 'budget_data.csv')
 
-# print(budget_data)
+print(budget_data)
 
 with open(budget_data) as csv_file:
     csv_Reader = csv.reader(csv_file, delimiter=",")

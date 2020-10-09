@@ -2,9 +2,8 @@
 import os
 import csv
 
-# navigating and joining the file
+# navigating and joining the file path
 budget_data = os.path.join('Resources', 'budget_data.csv')
-
 print(budget_data)
 
 with open(budget_data) as csv_file:
@@ -57,7 +56,7 @@ print("Greatest Decrease in Profits: " + str(totalMonths[average_change.index(
 
 # output to a text file
 output = open("Analysis/Py_Bank_Output.txt", "w")
-output.write("Analysis" + "\n")
+output.write("Financial Analysis" + "\n")
 output.write('Total Months : ' + str(total_months) + "\n")
 output.write("Total: " + "$" + str(sum(Profit)) + "\n")
 output.write('Average change: ' + '$' +

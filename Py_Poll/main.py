@@ -1,10 +1,11 @@
 import os
 import csv
 
-# joining the path
+
+# navigating and joining the file path
 election_data = os.path.join("Resources", "election_data.csv")
 
-# Declaring empty to store the data
+# Declaring values
 total_votes = 0
 khan_votes = 0
 correy_votes = 0
@@ -33,9 +34,11 @@ with open(election_data) as csv_file:
 # creating a dict and using candidates as key, votes as value pair
 candidates = ["Khan", "Correy", "Li", "O'Tooley"]
 votes = [khan_votes, correy_votes, li_votes, otooley_votes]
-# adding the list to map into a dict
+
+# adding the list to map into a dict by using the zip function
 add_pair = zip(candidates, votes)
 
+#storing the values in dictionary and finding the max value.
 Key_value_pair = dict(add_pair)
 Max_value = max(Key_value_pair, key=Key_value_pair.get)
 
@@ -59,7 +62,7 @@ print(f"O'Tooley: {otooley_percent: .3f} ({otooley_votes})")
 print("*-*-*-*-*-*-*--**-*-*-**-*-*-*-*")
 print(f"Winner : {Max_value}")
 
-# Print the output to a text file
+# output to a text file
 
 
 output = open("Analysis/Py_Poll.txt", "w")
